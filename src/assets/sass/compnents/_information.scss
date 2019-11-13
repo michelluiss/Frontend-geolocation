@@ -1,0 +1,47 @@
+.section-information {
+    > .container {
+        display: flex;
+        justify-content: space-around;
+    }
+    .information {
+        display: flex;
+        flex-direction: column;
+        flex: 0 45%;
+        width: 45%;
+        padding: gr(40) gr(20);
+        border: 1px solid #A9A9A9;
+        border-radius: gr(10);
+        .subtitle {
+            font-size: gr(30);
+            text-align: center;
+            margin: 0 0 gr(20);
+        }
+        .data-domain {
+            display: flex;
+            flex-direction: column;
+            width: gr(350);
+            margin: 0 auto;
+            .item {
+                display: flex;
+                justify-content: space-between;
+                label {
+                    font-weight: 700;
+                }
+                span {
+                    color: #ff0000;
+                }
+            }
+        }
+        .box-buttons {
+            display: flex;
+            justify-content: space-between;
+            margin: gr(20) 0 0;
+            .btn {
+                @include btn-style;
+                &[disabled] {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}

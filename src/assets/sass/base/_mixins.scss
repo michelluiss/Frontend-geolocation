@@ -1,0 +1,34 @@
+
+@function get-value($n) {
+    @return $n;
+}
+
+@mixin font-size($font-size) {
+
+    $base-px-size: $font-base;
+
+    font-size: $font-size;
+    font-size: (get-value($font-size) / $base-px-size) + rem;
+}
+
+@function getrem($n) {
+    $base-px-size: $font-base;
+
+    @return (get-value($n) / $base-px-size) + rem;
+}
+
+@function gr($n) {
+    @return getrem($n);
+}
+
+@mixin btn-style {
+    font-size: gr(18);
+    line-height: gr(22);
+    background: #6A5ACD;
+    color: #fff;
+    border: 0;
+    border-radius: gr(5);
+    padding: gr(15) gr(30);
+    text-transform: uppercase;
+    cursor: pointer;
+}

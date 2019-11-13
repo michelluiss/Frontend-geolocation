@@ -1,0 +1,30 @@
+.form-geolocation {
+    .form {
+        padding: gr(40) gr(20);
+        max-width: gr(700);
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        .field-domain {
+            width: 70%;
+        }
+        .input-host {
+            padding: gr(15) gr(10);
+            border: 1px solid #C0C0C0;
+            border-radius: gr(5);
+            font-size: gr(18);
+            line-height: gr(22);
+            width: 100%;
+        }
+        small {
+            color: red;
+            font-weight: bold;
+            transition: all linear 0.3s;
+            font-size: gr(15);
+        }
+        .btn {
+            @include btn-style;
+        }
+    }
+}
